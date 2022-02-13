@@ -107,7 +107,7 @@ function SingleBlog({ post }) {
                       </Row>
                       <Row className="px-4 d-flex align-items-center">
                         <Col>
-                          <Row className="d-flex py-5">
+                          <Row className="d-flex py-5 m-0">
                             <Col className="col-xl-5 col-lg-6 col-md-12 col-sm-12 col-12">
                               <h5 className="pt-2 fw-bold">
                                 Border Countries:
@@ -115,7 +115,7 @@ function SingleBlog({ post }) {
                             </Col>
                             <Col className="col-xl-7 col-lg-6 col-md-12 col-sm-12 col-12 p-0">
                               {post.borders ? (
-                                <ul className="d-flex flex-wrap justify-content-start p-0 border-region">
+                                <ul className="d-flex flex-wrap justify-content-start border-region">
                                   {post.borders.map((bor, id) => (
                                     <li
                                       className="px-3 py-1 w-auto shadow-sm m-2"
