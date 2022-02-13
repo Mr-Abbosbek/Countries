@@ -53,7 +53,7 @@ function SingleBlog({ post }) {
                     </Col>
                     <Col className="px-lg-5 px-md-3 px-sm-0 px-0 py-lg-0 py-md-0 py-sm-5 py-0 col-lg-7 col-md-6 col-sm-12 col-12">
                       <h2 className="px-4 fw-bold">{post.name}</h2>
-                      <Row className="px-4">
+                      <Row className="px-4 m-0">
                         <Col className="col-lg-6 col-md-12 col-sm-6 col-12">
                           <p className="fw-bold">
                             Native name:{" "}
@@ -105,7 +105,7 @@ function SingleBlog({ post }) {
                           </p>
                         </Col>
                       </Row>
-                      <Row className="px-4 d-flex align-items-center">
+                      <Row className="px-4 d-flex align-items-center m-0">
                         <Col>
                           <Row className="d-flex py-5 m-0">
                             <Col className="col-xl-5 col-lg-6 col-md-12 col-sm-12 col-12">
@@ -138,7 +138,7 @@ function SingleBlog({ post }) {
             })}
           </>
         ) : (
-          <Row className="spinner">
+          <Row className="spinner p-0 m-0">
             <Col className="d-flex justify-content-center">
               <HashLoader color={color} loading={loading} size={70} />
               {/* <Col className="p-0">
