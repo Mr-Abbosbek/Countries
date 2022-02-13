@@ -47,14 +47,14 @@ function SingleBlog({ post }) {
             {post.map((post, id) => {
               if (urlName.name === post.name) {
                 return (
-                  <Row className="all-row d-flex flex-wrap px-4 m-0" key={id}>
+                  <Row className="all-row d-flex flex-wrap px-4 pb-5 pt-4 m-0" key={id}>
                     <Col className="m-0 p-1 col-lg-5 col-md-6 col-sm-12 col-12">
                       <Image src={post.flag} className="img-fluid" />
                     </Col>
                     <Col className="px-lg-5 px-md-3 px-sm-0 px-0 py-lg-0 py-md-0 py-sm-5 py-0 col-lg-7 col-md-6 col-sm-12 col-12">
                       <h2 className="px-4 fw-bold">{post.name}</h2>
                       <Row className="px-4 m-0">
-                        <Col className="col-lg-6 col-md-12 col-sm-6 col-12">
+                        <Col className="col-lg-6 col-md-12 col-sm-6 col-12 p-0">
                           <p className="fw-bold">
                             Native name:{" "}
                             <span className="fw-light">{post.nativeName}</span>
@@ -76,7 +76,7 @@ function SingleBlog({ post }) {
                             <span className="fw-light">{post.capital}</span>
                           </p>
                         </Col>
-                        <Col className="col-lg-6 col-md-12 col-sm-6 col-12">
+                        <Col className="col-lg-6 col-md-12 col-sm-6 col-12 p-0">
                           <p className="fw-bold">
                             Top Level Domain:{" "}
                             <span className="fw-light">
@@ -106,19 +106,19 @@ function SingleBlog({ post }) {
                         </Col>
                       </Row>
                       <Row className="px-4 d-flex align-items-center m-0">
-                        <Col>
+                        <Col className="p-0">
                           <Row className="d-flex py-5 m-0">
-                            <Col className="col-xl-5 col-lg-6 col-md-12 col-sm-12 col-12">
+                            <Col className="col-xl-5 col-lg-6 col-md-12 col-sm-12 col-12 p-0">
                               <h5 className="pt-2 fw-bold">
                                 Border Countries:
                               </h5>
                             </Col>
                             <Col className="col-xl-7 col-lg-6 col-md-12 col-sm-12 col-12 p-0">
                               {post.borders ? (
-                                <ul className="d-flex flex-wrap w-100 justify-content-start border-region">
+                                <ul className="d-flex flex-wrap p-0 m-0 justify-content-start border-region">
                                   {post.borders.map((bor, id) => (
                                     <li
-                                      className="px-3 py-1 w-auto shadow-sm m-2"
+                                      className="px-3 py-1 w-auto shadow-sm"
                                       key={id}
                                     >
                                       {bor}
@@ -138,7 +138,7 @@ function SingleBlog({ post }) {
             })}
           </>
         ) : (
-          <Row className="spinner p-0 m-0">
+          <Row className="spinner m-0">
             <Col className="d-flex justify-content-center">
               <HashLoader color={color} loading={loading} size={70} />
               {/* <Col className="p-0">

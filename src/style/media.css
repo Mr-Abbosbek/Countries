@@ -38,6 +38,9 @@
   .singleBlog-blogs img{
     height: 300px !important;
   }
+  .spinner{
+    height: 69.5vh !important;
+  }
   .spinner-blog{
     height: 48vh !important;
     padding-top: 50px !important;
@@ -67,6 +70,9 @@
   }
   .singleBlog-blogs img{
     height: 100% !important;
+  }
+  .spinner{
+    height: 69.5vh !important;
   }
   .spinner-blog{
     height: 48vh !important;
@@ -100,6 +106,9 @@
   }
   .singleBlog-blogs{
     padding: 0px !important;
+  }
+  .spinner{
+    height: 72vh !important;
   }
   .spinner-blog{
     height: 48vh !important;
