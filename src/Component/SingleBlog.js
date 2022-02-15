@@ -84,16 +84,14 @@ function SingleBlog({ post }) {
                             </span>
                           </p>
                           <p className="fw-bold">
-                            Currencies:
-                            <span className="fw-light">
+                            Currencies:{" "}
                               {post.currencies ? (
                                 <>
                                   {post.currencies.map((cur, id) => (
-                                    <div key={id}>Currencies: {cur.name}</div>
+                                    <span className="fw-light" key={id}>{cur.name}</span>
                                   ))}
                                 </>
                               ) : null}
-                            </span>
                           </p>
                           <p className="fw-bold">
                             Languages:{" "}
