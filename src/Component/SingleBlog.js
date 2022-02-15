@@ -34,9 +34,9 @@ function SingleBlog({ post }) {
 
   return (
     <div className="pt-5 pb-lg-5 singleBlogs">
-      <div className="blog-container">
+      <div className="blog-container singleBlog-blogs">
         <Row className="all-row px-lg-3 px-sm-2 px-0">
-          <Col className="mt-3 mx-0 px-0">
+          <Col className="mt-3 mx-0">
             <Link
               to="/"
               className="mt-5 btn back-button shadow d-inline-flex align-items-center px-4 py-2"
