@@ -54,6 +54,9 @@
     justify-content: center;
     grid-gap: 40px !important;
   }
+  .singleBlog-blogs{
+    padding: 0 23px !important;
+  }
   .form .search-icon{
     margin-left: 25px !important;
   }

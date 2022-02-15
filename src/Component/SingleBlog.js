@@ -29,8 +29,8 @@ function SingleBlog({ post }) {
   return (
     <div className="pt-5 pb-lg-5 singleBlogs">
       <div className="blog-container">
-        <Row className="all-row px-3">
-          <Col className="mt-3">
+        <Row className="all-row px-lg-3 px-sm-2">
+          <Col className="mt-3 mx-0">
             <Link
               to="/"
               className="mt-5 btn back-button shadow d-inline-flex align-items-center px-4 py-2"
@@ -47,13 +47,14 @@ function SingleBlog({ post }) {
             {post.map((post, id) => {
               if (urlName.name === post.name) {
                 return (
-                  <Row className="all-row d-flex flex-wrap px-4 pb-5 pt-4 m-0" key={id}>
-                    <Col className="m-0 p-1 col-lg-5 col-md-6 col-sm-12 col-12">
-                      <Image src={post.flag} className="img-fluid" />
+                  <Row className="all-row d-flex flex-wrap pb-5 pt-4 m-0 px-lg-0 px-md-0 px-sm-0 px-3" key={id}>
+                    <Col className="m-0 col-lg-5 col-md-6 col-sm-12 col-12">
+                      <Image src={post.flag} className="img-fluid p-0" />
                     </Col>
-                    <Col className="px-lg-5 px-md-3 px-sm-0 px-0 py-lg-0 py-md-0 py-sm-5 py-0 col-lg-7 col-md-6 col-sm-12 col-12">
-                      <h2 className="px-4 fw-bold">{post.name}</h2>
-                      <Row className="px-4 m-0">
+                    <Col className="px-lg-5 px-md-3  py-lg-0 py-md-0 py-sm-5 py-0 col-lg-7 col-md-6 col-sm-12 col-12">
+                      <h2 className="px-lg-4 fw-bold">{post.name}</h2>
+
+                      <Row className="px-lg-4 m-0 d-flex justify-content-end">
                         <Col className="col-lg-6 col-md-12 col-sm-6 col-12 p-0">
                           <p className="fw-bold">
                             Native name:{" "}
@@ -103,7 +104,8 @@ function SingleBlog({ post }) {
                           </p>
                         </Col>
                       </Row>
-                      <Row className="px-4 d-flex align-items-center m-0">
+
+                      <Row className="px-lg-4 d-flex align-items-center m-0">
                         <Col className="p-0">
                           <Row className="d-flex py-5 m-0">
                             <Col className="col-xl-5 col-lg-6 col-md-12 col-sm-12 col-12 p-0">
