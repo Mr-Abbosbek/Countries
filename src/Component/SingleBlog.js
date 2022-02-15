@@ -34,8 +34,8 @@ function SingleBlog({ post }) {
 
   return (
     <div className="pt-5 pb-lg-5 singleBlogs">
-      <div className="blog-container">
-        <Row className="all-row back-button-blog">
+      <div className="blog-container singleBlog-blogs">
+        <Row className="all-row mx-0 back-button-blog">
           <Col className="mt-3 mx-0">
             <Link
               to="/"
