@@ -10,7 +10,13 @@ function SingleBlog({ post }) {
   let [color] = useState("#36D7B7");
 
   let urlName = useParams();
-  console.log(urlName.name);
+  console.log(urlName.name.length);
+
+  if(urlName.name.length){
+    document.querySelector(".body").classList.add("singleBlog");
+  } else {
+    document.querySelector(".body").classList.remove("singleBlog");
+  }
 
   let arr = [];
   post.map((e) => {

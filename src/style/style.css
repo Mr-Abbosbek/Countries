@@ -5,8 +5,10 @@
 html{
   box-sizing: border-box;
 }
-body{
+.body{
   background-color: #f2f2f2;
+}
+body{
   font-family: "Nunito Sans", Arial, sans-serif !important;
 }
 ul{
@@ -125,7 +127,7 @@ ul{
 }
 .spinner{
   padding-top: 100px;
-  height: 63vh;
+  /* height: 63vh; */
 }
 .border-region li{
   background: white;
@@ -133,7 +135,7 @@ ul{
   margin-right: 15px !important;
   margin-bottom: 10px !important;
 }
-.singleBlogs{
+.singleBlog{
   background: white;
 }
 

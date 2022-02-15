@@ -3,8 +3,19 @@ import { Col, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Row } from "reactstrap";
 import { HashLoader } from "react-spinners";
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
 function Blogs(data) {
+
+  let urlName = useParams();
+  console.log(urlName.name);
+
+  if(!urlName.name==="undefined"){
+    document.querySelector(".body").classList.add("singleBlog");
+  } else {
+    document.querySelector(".body").classList.remove("singleBlog");
+  }
+
   let [loading] = useState(true);
   let [color] = useState("#36D7B7");
 
