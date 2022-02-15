@@ -34,8 +34,8 @@ function SingleBlog({ post }) {
 
   return (
     <div className="pt-5 pb-lg-5 singleBlogs">
-      <div className="blog-container singleBlog-blogs mb-3">
-        <Row className="all-row px-lg-3 px-sm-2 px-0">
+      <div className="blog-container">
+        <Row className="all-row back-button-blog">
           <Col className="mt-3 mx-0">
             <Link
               to="/"
@@ -53,9 +53,9 @@ function SingleBlog({ post }) {
             {post.map((post, id) => {
               if (urlName.name === post.name) {
                 return (
-                  <Row className="all-row d-flex flex-wrap pb-5 pt-4 m-0 px-lg-0 px-md-0 px-sm-0 px-3" key={id}>
+                  <Row className="all-row d-flex flex-wrap pb-5 m-0 px-lg-0 px-md-0 px-sm-0 px-3" key={id}>
                     <Col className="m-0 col-lg-5 col-md-6 col-sm-12 col-12">
-                      <Image src={post.flag} className="img-fluid p-0" />
+                      <Image src={post.flag} className="img-fluid p-0 w-100" />
                     </Col>
                     <Col className="px-lg-5 px-md-3  py-lg-0 py-md-0 py-sm-5 py-0 col-lg-7 col-md-6 col-sm-12 col-12">
                       <h2 className="px-lg-4 fw-bold">{post.name}</h2>

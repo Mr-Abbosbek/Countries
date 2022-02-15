@@ -116,6 +116,12 @@ ul{
 .Card-text span{
   color: gray;
 }
+.back-button-blog{
+  padding-left: 12px;
+}
+.back-button-blog a{
+  margin-bottom: 25px;
+}
 .back-button{
   background: white !important;
 }
@@ -127,7 +133,6 @@ ul{
 }
 .spinner{
   padding-top: 100px;
-  /* height: 100vh; */
 }
 .border-region li{
   background: white;
