@@ -108,7 +108,8 @@
     margin-left: 20px !important;
   }
   .singleBlog-blogs{
-    padding: 0px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
   }
   .spinner{
     height: 72vh !important;

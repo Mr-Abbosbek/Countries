@@ -19,7 +19,7 @@ function SmallRouter() {
       <div className="App">
         <Switch>
           <Route path="/" component={AllBlog} exact />
-          <Route path="/name/:name" component={Single} exact />
+          <Route path="/name/:name" component={Single} />
         </Switch>
       </div>
     </BrowserRouter>
