@@ -117,7 +117,7 @@ ul{
   color: gray;
 }
 .back-button-blog{
-  padding-left: 12px;
+  padding-left: 12px !important;
 }
 .back-button-blog a{
   margin-bottom: 35px;
