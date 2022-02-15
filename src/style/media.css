@@ -81,9 +81,9 @@
     height: 48vh !important;
     padding-top: 30px !important;
   }
-  .back-button-blog{
-    padding-left: 8px !important;
-  }
+  /* .back-button-blog{
+    padding-left: 12px !important;
+  } */
 }
 
 /* xs */
@@ -110,7 +110,7 @@
     margin-right: 20px !important;
     margin-left: 20px !important;
   }
-  .singleBlog-blogs, .blog-container{
+  .singleBlog-blogs, .singleBlog-button{
     padding-left: 0px !important;
     padding-right: 0px !important;
   }
