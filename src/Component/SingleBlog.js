@@ -35,8 +35,8 @@ function SingleBlog({ post }) {
   return (
     <div className="pt-5 pb-lg-5 singleBlogs">
       <div className="blog-container">
-        <Row className="all-row px-lg-3 px-sm-2">
-          <Col className="mt-3 mx-0">
+        <Row className="all-row px-lg-3 px-sm-2 px-0">
+          <Col className="mt-3 mx-0 px-0">
             <Link
               to="/"
               className="mt-5 btn back-button shadow d-inline-flex align-items-center px-4 py-2"
@@ -47,7 +47,7 @@ function SingleBlog({ post }) {
           </Col>
         </Row>
       </div>
-      <div className="pt-5 pb-lg-3 pb-md-3 pb-sm-3 pb-0 blog-container singleBlog-blogs">
+      <div className="pb-lg-3 pb-md-3 pb-sm-3 pb-0 blog-container singleBlog-blogs">
         {post.length ? (
           <>
             {post.map((post, id) => {
