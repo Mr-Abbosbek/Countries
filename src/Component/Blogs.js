@@ -23,8 +23,8 @@ function Blogs(data) {
     <div className="d-flex justify-content-center blog-container">
       {
         data.post.length
-        ? <Row className="all-row">
-        <div className="all-div">
+        ? <Row className="all-row pb-3">
+        <div className="all-div pb-5">
           {data.post.map((count, index) => (
             <div className="card" key={index}>
               <Link to={`/name/${count.name}`} className="Link">
