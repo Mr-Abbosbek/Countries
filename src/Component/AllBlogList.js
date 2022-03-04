@@ -9,6 +9,7 @@ function AllBlogs(data) {
 
   const selectRegion = useMemo(() => {
       if (select.option.length) {
+      setFilter({query: "" })
       const newItem = [...post].filter((item) => item.region === select.option);
       return newItem;
     }
@@ -33,14 +34,15 @@ function AllBlogs(data) {
   }, [filter.query, sortedPosts]);
 
 
+
   return (
     <div>
       <FormList filter={filter} setFilter={setFilter} select={select} setSelect={setSelect} />
        
         {
-          (filter.query.length)
+          (filter.query)
           ? <Blogs post={sortedAndSearchPosts} key={sortedAndSearchPosts.id} /> :
-          (select.option.length)
+          (select.option)
           ? <Blogs post={selectRegion} key={selectRegion.id} />
           : <Blogs post={post} key={post.id} />
         }
