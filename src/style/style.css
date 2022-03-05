@@ -111,11 +111,15 @@ ul{
   height: 100% !important;
 }
 .Card-text p{
-  line-height: 7px;
+  line-height: 15px;
 }
 .Card-text span{
   color: gray;
 }
+.capital-text{
+  line-height: 21px !important;
+}
+
 .back-button-blog a{
   margin-bottom: 35px;
 }

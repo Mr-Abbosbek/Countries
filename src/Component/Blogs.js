@@ -32,16 +32,16 @@ function Blogs(data) {
                   <Image src={count.flags.png} />
                 </div>
                 <div className="Card-text text-black p-4">
-                  <h5>{count.name}</h5>
-                  <p className="pt-3">
+                  <h5 className="fw-bold">{count.name}</h5>
+                  <div className="pt-2">
                     Population: <span>{count.population}</span>
-                  </p>
-                  <p>
+                  </div>
+                  <div className="pt-1">
                     Region: <span>{count.region}</span>
-                  </p>
-                  <p>
-                    capital: <span>{count.capital}</span>
-                  </p>
+                  </div>
+                  <div className="pt-1 capital-text">
+                    Capital: <span>{count.capital}</span>
+                  </div>
                 </div>
               </Link>
             </div>
