@@ -41,10 +41,10 @@ function AllBlogs(data) {
        
         {
           (filter.query)
-          ? <Blogs post={sortedAndSearchPosts} key={sortedAndSearchPosts.id} /> :
+          ? <Blogs isLoading={data.isLoading} postError={data.postError} post={sortedAndSearchPosts} key={sortedAndSearchPosts.id} /> :
           (select.option)
-          ? <Blogs post={selectRegion} key={selectRegion.id} />
-          : <Blogs post={post} key={post.id} />
+          ? <Blogs isLoading={data.isLoading} postError={data.postError} post={selectRegion} key={selectRegion.id} />
+          : <Blogs isLoading={data.isLoading} postError={data.postError} post={post} key={post.id} />
         }
         
     </div>

@@ -81,6 +81,9 @@
     height: 48vh !important;
     padding-top: 30px !important;
   }
+  .content_box_404 p, .link_404{
+    font-size: 15px !important;
+  }
 }
 
 /* xs */

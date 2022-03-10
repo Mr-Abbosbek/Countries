@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-// import AllCounter from "./AllCounter";
+import React, { useEffect, useState } from "react";
 import SingleBlog from "./SingleBlog";
 import AllBlogList from "./AllBlogList";
 
@@ -7,7 +6,9 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Heder from "./Heder";
 import './../style/media.css';
 import './../style/style.css';
-import axios from "axios";
+import { useFetching } from "./hooks/useFetching";
+import PostServerApi from './../API/PostServiceApi';
+import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
 
 function SmallRouter() {
 
@@ -20,6 +21,7 @@ function SmallRouter() {
         <Switch>
           <Route path="/" component={AllBlog} exact />
           <Route path="/name/:name" component={Single} />
+          <Redirect to="/" />
         </Switch>
       </div>
     </BrowserRouter>
@@ -27,48 +29,42 @@ function SmallRouter() {
 }
 
 
-class AllBlog extends Component {
-  state = {
-    post: [],
-  };
+const AllBlog = () => {
+  const [posts, setPosts] = useState([]);
+  
+  const [fetchPosts, isLoading, postError ] = useFetching(async ()=>{
+    const data = await PostServerApi.getAllPost();
+    setPosts(data);
+  })
 
-  componentDidMount() {
-    axios.get("https://restcountries.com/v2/all").then((res) => {
-      const post = res.data;
-      this.setState({ post });
-      console.log(post);
-    });
-  }
+  useEffect(() => {
+    fetchPosts();
+  }, []);
 
-  render() {
     return (
       <div>
-        <AllBlogList post={this.state.post} key={this.state.post.id} />
+        <AllBlogList post={posts} key={posts.id} isLoading={isLoading} postError={postError} />
       </div>
     )
-  }
 }
 
-class Single extends Component {
-  state = {
-    post: [],
-  };
+const Single = () => {
+  const [posts, setPosts] = useState([]);
+  
+  const [fetchPosts, isLoading, postError ] = useFetching(async ()=>{
+    const data = await PostServerApi.getAllPost();
+    setPosts(data);
+  })
 
-  componentDidMount() {
-    axios.get("https://restcountries.com/v2/all").then((res) => {
-      const post = res.data;
-      this.setState({ post });
-      console.log(post);
-    });
-  }
+  useEffect(() => {
+    fetchPosts();
+  }, []);
 
-  render() {
     return (
       <div>
-        <SingleBlog post={this.state.post} key={this.state.post.id} />
+        <SingleBlog post={posts} key={posts.id} isLoading={isLoading} postError={postError} />
       </div>
     )
-  }
 }
 
 
