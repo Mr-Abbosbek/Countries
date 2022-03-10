@@ -110,11 +110,11 @@ ul{
   width: 100% !important;
   height: 100% !important;
 }
-.Card-text p{
-  line-height: 15px;
+.Card-text .text_p{
+  line-height: 18px;
 }
 .Card-text span{
-  color: gray;
+  color: rgb(100, 98, 98);
 }
 .capital-text{
   line-height: 21px !important;
@@ -159,7 +159,7 @@ ul{
 .bodyColor .header, .bodyColor .darkBtn, .bodyColor .card, .bodyColor .form input, .bodyColor .form select,.bodyColor .back-button, .bodyColor .border-region li{
   background-color: #2b3844 !important;
 }
-.bodyColor .header .world, .bodyColor .darkBtn, .bodyColor .form .search-icon , .bodyColor .clear-icon, .bodyColor .form input, .bodyColor .form select, .bodyColor .form input::placeholder, .bodyColor .card, .bodyColor .Card-text h5, .bodyColor .Card-text p, .bodyColor .back-button{
+.bodyColor .header .world, .bodyColor .darkBtn, .bodyColor .form .search-icon , .bodyColor .clear-icon, .bodyColor .form input, .bodyColor .form select, .bodyColor .form input::placeholder, .bodyColor .card, .bodyColor .Card-text h5, .bodyColor .Card-text .text_p, .bodyColor .back-button{
   color: white !important;
 }
 .bodyColor .form-select{
@@ -187,6 +187,6 @@ ul{
 .flag-div{
   box-shadow: 0 0 7px 2px rgb(0, 0 , 0, 0.02)
 }
-.Card-text span{
-  color: rgb(189, 184, 184);
+.bodyColor .Card-text span{
+  color: rgb(187, 183, 183);
 }

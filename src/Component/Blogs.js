@@ -33,13 +33,13 @@ function Blogs(data) {
                 </div>
                 <div className="Card-text text-black p-4">
                   <h5 className="fw-bold">{count.name}</h5>
-                  <div className="pt-2">
+                  <div className="pt-2 text_p">
                     Population: <span>{count.population}</span>
                   </div>
-                  <div className="pt-1">
+                  <div className="pt-1 text_p">
                     Region: <span>{count.region}</span>
                   </div>
-                  <div className="pt-1 capital-text">
+                  <div className="pt-1 text_p capital-text">
                     Capital: <span>{count.capital}</span>
                   </div>
                 </div>
