@@ -6,7 +6,6 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Heder from "./Heder";
 import './../style/media.css';
 import './../style/style.css';
-import { useFetching } from "./hooks/useFetching";
 import PostServerApi from './../API/PostServiceApi';
 import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
 
@@ -31,11 +30,20 @@ function SmallRouter() {
 
 const AllBlog = () => {
   const [posts, setPosts] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [postError, setPostError] = useState(false);
   
-  const [fetchPosts, isLoading, postError ] = useFetching(async ()=>{
-    const data = await PostServerApi.getAllPost();
-    setPosts(data);
-  })
+  async function fetchPosts(){
+    try{
+      setIsLoading(true);
+      const data = await PostServerApi.getAllPost();
+      setPosts(data);
+    } catch(e){
+      setPostError(true);
+    } finally {
+      setIsLoading(false);
+    }
+  }
 
   useEffect(() => {
     fetchPosts();
@@ -50,11 +58,20 @@ const AllBlog = () => {
 
 const Single = () => {
   const [posts, setPosts] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [postError, setPostError] = useState(false);
   
-  const [fetchPosts, isLoading, postError ] = useFetching(async ()=>{
-    const data = await PostServerApi.getAllPost();
-    setPosts(data);
-  })
+  async function fetchPosts(){
+    try{
+      setIsLoading(true);
+      const data = await PostServerApi.getAllPost();
+      setPosts(data);
+    } catch(e){
+      setPostError(true);
+    } finally {
+      setIsLoading(false);
+    }
+  }
 
   useEffect(() => {
     fetchPosts();
