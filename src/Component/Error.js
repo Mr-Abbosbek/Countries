@@ -4,10 +4,10 @@ import './../style/Error.css';
 
 function Error() {
   return (
-      <div className="container-fluid  p-0">
+      <div className="container-fluid">
         <div className="row">
-          <div className="col-12 p-0 d-flex justify-content-center">
-            <div className="col-12 p-0 col-sm-offset-1  text-center m-0">
+          <div className="col-sm-12 d-flex justify-content-center">
+            <div className="col-sm-10 col-sm-offset-1  text-center">
               <div className="four_zero_four_bg">
                 <h1 className="text-center ">404</h1>
               </div>
