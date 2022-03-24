@@ -21,7 +21,7 @@ function Blogs(data) {
 
   return (
     <>
-      <div className="d-flex justify-content-center blog-container">
+      <div className="d-flex justify-content-center container-fluid p-0">
         <Row className="all-row pb-3 m-0">
           <Col className="col-12">
             {data.postError && <Error />}
